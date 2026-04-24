@@ -11,15 +11,34 @@
         <h1>Приложение для работы с большими данными</h1>
     </header>
     <main>
-        <section>
+        <section id="upload-file">
             <form action="" method="post" enctype="multipart/form-data">
                 <label for="file-upload" class="block">Загрузите свои данные:</label>
                 <input type="file" id="file-upload" name="dataFile" />
                 <button type="submit">Загрузить</button>
             </form>
         </section>
-        <section>
-            
+        <section id="preview-section" style="display: none;">
+            <h2>Пример данных (первые 5 строк)</h2>
+            <div class="table-wrapper">
+                <table id="preview-table">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <p id="dataset-id-display"></p>
+        </section>
+        <section id="analyze" style="display: none;">
+            <h2>Анализ данных</h2>
+            <div id="column-list"></div>
+            <label for="target-select">Выберите целевую переменную:</label>
+            <select id="target-select"></select>
+            <button id="analyze-btn">Показать статистику</button>
+            <div id="stats-output"></div>
+        </section>
+
+        <section id="train" style="display: none;">
+            <button id="train-btn">Обучить модель</button>
         </section>
     </main>
     <script src="main.js"></script>
